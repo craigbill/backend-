@@ -15,32 +15,8 @@ jobs:
 
     - name: Docker Build
       run: |
-        hostnamectl
+        docker build -t backend-:latest .
 
-  build-and-push2:
-    runs-on: ubuntu-latest
-    needs: build-and-push1
-
-    steps:
-    - name: Checkout out the repository
-      uses: actions/checkout@v2
-
-    - name: Docker Build
-      run: |
-        hostnamectl
-
-
-  build-and-push3:
-    runs-on: ubuntu-latest
-    needs: build-and-push2
-
-    steps:
-    - name: Checkout out the repository
-      uses: actions/checkout@v2
-
-    - name: Docker Build
-      run: |
-        hostnamectl
 
 
 
