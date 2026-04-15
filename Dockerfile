@@ -17,7 +17,7 @@ COPY ./pom.xml /app
 # Build the application
 RUN mvn -f /app/pom.xml clean package
 RUN ls -la /app/target
-RUN cp /app/target/*.jar /app/app.jar
+
 # Copy the built JAR file to the container
 
 
