@@ -19,7 +19,7 @@ jobs:
 
   build-and-push2:
     runs-on: ubuntu-latest
-    need: build-and-push1
+    needs: build-and-push1
 
     steps:
     - name: Checkout out the repository
@@ -32,7 +32,7 @@ jobs:
 
   build-and-push3:
     runs-on: ubuntu-latest
-    need: build-and-push2
+    needs: build-and-push2
 
     steps:
     - name: Checkout out the repository
