@@ -11,7 +11,6 @@ WORKDIR /app
 
 # Copy source files and pom.xml
 COPY .env /app/src/main/resources/.env 
-COPY application.properties /app/src/main/resources/application.properties
 COPY ./src /app/src
 COPY ./pom.xml /app
 
