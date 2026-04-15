@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-push1:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
 
     - name: Docker Build
       run: |
-        docker build -t backend-:latest .
+        docker build -t backend:latest .
 
 
 
