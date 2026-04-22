@@ -10,12 +10,12 @@ RUN apt install maven -y
 WORKDIR /app
 
 # Copy source files and pom.xml
-COPY .env /app/src/main/resources/.env 
+COPY application.properties /app/src/main/resources/application.properties
 COPY ./src /app/src
 COPY ./pom.xml /app
 
 # Build the application
-RUN mvn -f /app/pom.xml clean package -DskipTests
+RUN mvn -f /app/pom.xml clean package 
 RUN ls -la /app/target
 
 # Copy the built JAR file to the container
